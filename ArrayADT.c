@@ -13,6 +13,12 @@ void value(struct myStruct *a , int t , int s){
 	a->ptr = (int *)malloc(t*sizeof(int));
 }
 
+void valuenter(struct myStruct *a){
+	for(int i = 0; i< a->used_size ;i++){
+		printf("Enter the value in %d" ,i );
+		scanf("%d",(a->ptr)[i]);
+	}
+}
 int main(){
 	struct myStruct arr ;
 	value(&arr , 10, 2);
