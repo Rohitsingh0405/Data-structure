@@ -21,8 +21,8 @@ void input(struct arr *b){
 }
 void reverse(struct arr *b, struct arr *c){
 	for(int i = 0; i<b->size; i++){
-		for(int j = c->size ; b>=0 ;b--){
-		(c->p)[j] = (b->p)[i];
+		for(int j = c->size ; j>=0 ;j--){
+		(c->p)[j-1] = (b->p)[i];
 
 		}
 
@@ -30,7 +30,7 @@ void reverse(struct arr *b, struct arr *c){
 }
 void print(struct arr *b){
 	for(int i =0; i<b->size; i++){
-		printf("%d",(b->p)[i]);
+		printf("%d\n",(b->p)[i]);
 	}
 }
 int main(){
@@ -40,5 +40,7 @@ value(&a,5,2);
 input(&a);
 value(&b,5,2);
 reverse(&a,&b);
+print(&a);
+print(&b);
 
 }
