@@ -19,7 +19,22 @@ void input(struct arr *b){
 		(b->p)[i] = n;
 	 }
 }
+void reverse(struct arr *b, struct arr *c){
+	for(int i = 0; i<b->size; i++){
+		for(int j = c->size ; b>=0 ;b--){
+		(c->p)[j] = (b->p)[i];
+
+		}
+
+	}
+}
+
 int main(){
 struct arr a;
+struct arr b;
 value(&a,5,2);
+input(&a);
+value(&b,5,2);
+reverse(&a,&b);
+
 }
