@@ -19,9 +19,15 @@ void valuenter(struct myStruct *a){
 		scanf("%d",(a->ptr)[i]);
 	}
 }
+void show(struct myStruct *a){
+	for(int i = 0; i< a->used_size ; i++){
+		printf((a->ptr)[i]);
+	}
+}
 int main(){
 	struct myStruct arr ;
 	value(&arr , 10, 2);
+	
 
 	return 0;
 }
