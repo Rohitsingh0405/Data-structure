@@ -21,8 +21,8 @@ void input(struct arr *b){
 }
 void reverse(struct arr *b, struct arr *c){
 	for(int i = 0; i<b->size; i++){
-		for(int j = c->size ; j>=0 ;j--){
-		(c->p)[j-1] = (b->p)[i];
+		for(int j = c->size-1 ; j>=0 ;j--){
+		(c->p)[j] = (b->p)[i];
 
 		}
 
