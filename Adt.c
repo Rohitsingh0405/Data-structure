@@ -15,7 +15,7 @@ void init(struct new *b,int t, int s ){
 }
 void input(struct new *b){
 	int n; 
-	for(int i =0 ; i< b->uses_size ;i++){
+	for(int i = b->uses_size -1  ; i>=0 ;i--){
 		printf("Enter the value %d", i);
 		scanf("%d",&n);
 		(b->p)[i] = n;
@@ -29,6 +29,9 @@ void show(struct new *a){
 }
 int main(){
 	struct new a;
-	
+	init(&a,10,2);
+	input(&a);
+	show(&a);
+
 	return 0;
 }
