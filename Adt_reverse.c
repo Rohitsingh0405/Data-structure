@@ -28,7 +28,11 @@ void reverse(struct arr *b, struct arr *c){
 
 	}
 }
-
+void print(struct arr *b){
+	for(int i =0; i<b->size; i++){
+		printf("%d",(b->p)[i]);
+	}
+}
 int main(){
 struct arr a;
 struct arr b;
