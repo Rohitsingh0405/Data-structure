@@ -1,6 +1,7 @@
 #include<stdio.h>
 
 void display(int arr[] , int n ){
+	// Traversal part
 	for(int i = 0; i<n;i++){
 		printf("%d ",arr[i]);
 	}
@@ -8,6 +9,7 @@ void display(int arr[] , int n ){
 }
 
 int indexxInsertion(int arr[], int size, int element, int capacity, int index){
+	// insertion part
 	if(size>=capacity){
 		return -1;
 	}
