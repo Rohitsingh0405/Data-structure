@@ -22,7 +22,13 @@ void input(struct new *b){
 
 	}
 }
+void show(struct new *a){
+	for(int i = 0; i< a->uses_size ; i++){
+		printf("%d\n",(a->p)[i]);
+	}
+}
 int main(){
 	struct new a;
+	
 	return 0;
 }
