@@ -11,11 +11,13 @@ void display(int arr[] , int n ){
 int indexxInsertion(int arr[], int size, int element, int capacity, int index){
 	// insertion part
 	if(size>=capacity){
+		printf("insertion fail");
 		return -1;
 	}
 	for(int i = size-1 ; i>=index; i--){
 		arr[i+1] = arr[i];
 	}
+	printf("insertion successful");
 	arr[index] = element;
 	return 1;
 }
