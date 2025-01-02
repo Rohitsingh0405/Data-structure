@@ -8,7 +8,13 @@ struct new{
 
 };
 
-int main(){
+void init(struct new *b,int t, int s ){
+	b->total_size= t;
+	b->uses_size= s;
+	b->p=(int*)malloc(t*sizeof(int));
+}
 
+int main(){
+	struct new a;
 	return 0;
 }
