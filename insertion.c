@@ -2,9 +2,11 @@
 
 void display(int arr[] , int n ){
 	for(int i = 0; i<n;i++){
-		printf("%d\n",arr[i]);
+		printf("%d ",arr[i]);
 	}
+	printf("\n");
 }
+
 
 int main(){
 	int arr[100]= {1,3,4,555};
