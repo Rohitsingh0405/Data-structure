@@ -27,7 +27,8 @@ void show(struct myStruct *a){
 int main(){
 	struct myStruct arr ;
 	value(&arr , 10, 2);
-	
+	valuenter(&arr);
+	show(&arr);
 
 	return 0;
 }
