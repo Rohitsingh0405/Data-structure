@@ -14,14 +14,16 @@ void value(struct myStruct *a , int t , int s){
 }
 
 void valuenter(struct myStruct *a){
+	int n ;
 	for(int i = 0; i< a->used_size ;i++){
 		printf("Enter the value in %d" ,i );
-		scanf("%d",(a->ptr)[i]);
+		scanf("%d",&n);
+		(a->ptr)[i]=n;
 	}
 }
 void show(struct myStruct *a){
 	for(int i = 0; i< a->used_size ; i++){
-		printf((a->ptr)[i]);
+		printf("%d\n",(a->ptr)[i]);
 	}
 }
 int main(){
