@@ -20,13 +20,13 @@ void input(struct arr *b){
 	 }
 }
 void reverse(struct arr *b, struct arr *c){
-	for(int i = 0; i<b->size; i++){
+		int i = 0;
 		for(int j = c->size-1 ; j>=0 ;j--){
 		(c->p)[j] = (b->p)[i];
+		i++;
+}
 
-		}
-
-	}
+	
 }
 void print(struct arr *b){
 	for(int i =0; i<b->size; i++){
