@@ -16,23 +16,26 @@ int linerSearch(int arr[], int element, int size)
 
 // }/
 
-void BinarySearch(int arr[], int element, int size, int start)
+int BinarySearch(int arr[], int element, int size)
 {
-	int mid = arr[start] + arr[size];
-	if (arr[mid] == element)
-	{
-		printf("%d", element);
+	int mid, high,low;
+
+	low = 0;
+	high = arr[size-1];
+	while(low<=high){
+
+	mid = (low + high)/2;
+	if(arr[mid] == element){
+		return element;
 	}
-	else if (element < arr[mid])
-	{
-		int s = mid - 1;
-		BinarySearch(arr, element, s, start);
+	if(arr[mid]<element){
+		low = mid+1;
 	}
-	else if (element > arr[mid])
-	{
-		int s = mid + 1;
-		BinarySearch(arr, element, s, size);
+	else{
+		high = mid-1;
 	}
+	}
+	return -1;
 }
 
 int main()
@@ -41,12 +44,12 @@ int main()
 	int e = 65;
 	// int size = 5;
 	int size = sizeof(arr) / sizeof(int);
-	int start = 0;
+	// int start = 0;
 	// int a = linerSearch(arr,e,size);
 	// printf("%d",a);
+	
+	int a = BinarySearch(arr, e, size);
+	printf("%d ", a);
 
-	BinarySearch(arr, e, size, start);
-	// printf("%d ", a);
-
-	printf("%d", e);
+	
 }
