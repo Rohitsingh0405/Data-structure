@@ -13,7 +13,7 @@ void print(int arr[]){
 }
 int main(){
 	int arr[] = {10,45,32,54,65};
-	int index = 1;
+	int index = 3;
 	delete(arr,index);
 	print(arr);
 	return 0;
