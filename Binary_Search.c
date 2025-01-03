@@ -5,8 +5,6 @@ int linerSearch(int arr[],int element,int size){
 		if(arr[i]==element){
 			return i;
 		}
-
-		
 	}
 	return -1;
 
@@ -18,7 +16,7 @@ void BinarySearch(int arr[],int element){
 
 int main(){
 int arr[] = {12,54,65,32,12};
-int e = 32;
+int e = 52;
 // int size = 5;
 int size = sizeof(arr)/sizeof(int);
 
