@@ -5,6 +5,13 @@ struct node{
 	int data;
 	struct node * next;
 };
+void traver(struct node * ptr){
+	while(ptr!=NULL){
+
+	printf("Element : %d\n",ptr->data);
+	ptr = ptr->next;
+	}
+}
 int main(){
 	struct node * head;
 	struct node * second;
@@ -22,6 +29,7 @@ int main(){
 
 	third->data=9;
 	third->next=NULL;
+	traver(head);
 	return 0 ;
 
 }
