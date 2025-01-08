@@ -40,6 +40,13 @@ struct a* insertAtIndex(struct a*head,int data , int index){
 	return(head);
 }
 
+struct a* insertAfterNode(struct a* head,struct a* h, int data ){
+	struct a* ptre = (struct a*)malloc(sizeof(struct a));
+	ptre->data=data;
+	ptre->p=h->p;
+	h->p=ptre;
+	return head;
+}
 void traverse(struct a* ptr){
 	
 	while(ptr!=NULL){
@@ -91,12 +98,15 @@ int main(){
 	// printf("This is insertion at beginning\n");
 	// first = insertAtBegin(first,12);
 	// traverse(first);
-	printf("This is insertion at index\n");
-	insertAtIndex(first,32,1);
-	traverse(first);
-	printf("\nThis is insertion at end\n");
-	insertAtEnd(first,35);
-	
+	// printf("This is insertion at index\n");
+	// insertAtIndex(first,32,1);
+	// traverse(first);
+	// printf("\nThis is insertion at end\n");
+	// insertAtEnd(first,35);
+
+	// traverse(first);
+	printf("\nThis is insertion at any point\n");
+	insertAfterNode(first,first2,56);
 	traverse(first);
 
 	return 0;
